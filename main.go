@@ -9,8 +9,8 @@ import (
 	petname "github.com/dustinkirkland/golang-petname"
 	"github.com/joho/godotenv"
 
-	// We don't use this package directly, but we need to register its drivers
-	// with the database/sql package
+	// In addition to using the QuoteIdentifier function, we need to register
+	// the postgres drivers with the database/sql package
 	pq "github.com/lib/pq"
 )
 
