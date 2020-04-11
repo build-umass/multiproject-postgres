@@ -7,6 +7,8 @@ Each Postgres database can have multiple databases inside it (Yes, I know this i
 
 This application, when supplied adminstrative connection credentials for a Postgres instance, *P*, a database name, *D*, and a username, *U*, will create a new database *D* in *P* and a user with username *U* (and a random password composed of adjectives and animal names). It will set up database access privileges, so only *U* and the admin user can connect to *D*. This preserves privacy and prevents one codebase from messing with the data of another codebase.
 
+By using this application, each project will have their own separate database inside of the Postgres instance and no project will be able to access any other project's data.
+
 ## Usage
 Note: Most likely, you won't run this code yourself because it requires administrative credentials. Rather, you will ask an admin to run the script for you, and give you the output.
 
