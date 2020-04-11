@@ -109,7 +109,7 @@ func safeExec(db *sql.DB, query string, rollbackQueries ...string) {
 func safelyGetEnvVar(varName string) string {
 	value := os.Getenv(varName)
 	if len(value) == 0 {
-		log.Fatalf("Failed to load environment variable: %s", value)
+		log.Fatalf("Failed to load environment variable: %s", varName)
 	}
 	return value
 }
