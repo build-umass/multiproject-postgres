@@ -16,7 +16,8 @@ import (
 
 func main() {
 	if len(os.Args) != 3 {
-		log.Fatal("Usage: ./[executable name] [username] [database name]")
+		fmt.Println("Usage: ./[executable name] [username] [database name]")
+		os.Exit(1)
 	}
 	projectUsername := pq.QuoteIdentifier(os.Args[1])
 	projectDatabaseName := pq.QuoteIdentifier(os.Args[2])

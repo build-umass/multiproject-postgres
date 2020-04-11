@@ -9,3 +9,20 @@ This application, when supplied adminstrative connection credentials for a Postg
 
 ## Usage
 Note: Most likely, you won't run this code yourself because it requires administrative credentials. Rather, you will ask an admin to run the script for you, and give you the output.
+
+### Installation
+Install Golang
+
+Run (`-v` is for verbose)
+```
+go get -v github.com/build-umass/multitenant-pg
+```
+You might need to add $GOPATH/bin to your PATH variable, so you can access the binary from your terminal.
+
+Alternatively, you can clone this repository and run `go build .`. A binary will be created in the current directory.
+
+**IMPORTANT FOR MAINTAINERS**: The Github repository name must be kept in sync with the module name in go.mod. Otherwise, `go get` won't work! (But cloning the repository and running `go build .` will still work)
+### Configuration
+Create a .env file based off the .env.sample file and fill in the values. This executable requires connecting as an admin user, so you will need those credentials.
+### Usage
+`./[executable name] [username] [database name]`
