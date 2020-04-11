@@ -1,4 +1,4 @@
-module buildumass/multitenant_pg
+module github.com/build-umass/multitenant-pg
 
 go 1.14
 
