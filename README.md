@@ -27,4 +27,4 @@ Alternatively, you can clone this repository and run `go build .`. A binary will
 ### Configuration
 Create a .env file based off the .env.sample file and fill in the values. This executable requires connecting as an admin user, so you will need those credentials.
 ### Usage
-`./[executable name] [username] [database name]`
+`./multitenant-pg [username] [database name]`
