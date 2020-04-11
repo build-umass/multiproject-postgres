@@ -76,7 +76,7 @@ func main() {
 
 	log.Println("All commands executed successfully")
 	log.Printf("Created user %s with password \"%s\"\n", projectUsername, password)
-	log.Println("Don't lose the password! It is annoying to reset it.", projectUsername, password)
+	log.Println("Don't lose the password! It is annoying to reset it.")
 	log.Printf("Created database %s\n", projectDatabaseName)
 }
 
