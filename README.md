@@ -19,7 +19,8 @@ Run (`-v` is for verbose)
 ```
 go get -v github.com/build-umass/multitenant-pg
 ```
-You might need to add $GOPATH/bin to your PATH variable, so you can access the binary from your terminal.
+
+`go get` will download the source code, build it, and place the resulting binary in $GOPATH/bin. You can either run the executable by going to $GOPATH/bin, or, you can add $GOPATH/bin to your path, so all executables in that folder will be accessible from anywhere on your command prompt.
 
 Alternatively, you can clone this repository and run `go build .`. A binary will be created in the current directory.
 
