@@ -1,0 +1,5 @@
+# executable name
+multitenant_pg
+
+# sensitive info
+.env
