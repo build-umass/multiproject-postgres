@@ -56,6 +56,8 @@ func main() {
 	createDatabaseQuery := fmt.Sprintf("CREATE DATABASE %s WITH OWNER = %s;", projectDatabaseName, projectUsername)
 	safeExec(db, createDatabaseQuery, createUserRollback)
 
+	// same concept as the user rollback query. The most likely error when creating a database is that it already exists.
+	// so, we only execute the rollback if creating a database was successful, but some other command afterwards fails
 	createDatabaseRollback := fmt.Sprintf("DROP DATABASE %s;", projectDatabaseName)
 
 	// don't allow anyone to access the database
@@ -73,6 +75,7 @@ func main() {
 
 	log.Println("All commands executed successfully")
 	log.Printf("Created user %s with password \"%s\"\n", projectUsername, password)
+	log.Println("Don't lose the password! It is annoying to reset it.", projectUsername, password)
 	log.Printf("Created database %s\n", projectDatabaseName)
 }
 
