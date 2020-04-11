@@ -24,8 +24,8 @@ func main() {
 	err := godotenv.Load(".env")
 	if err != nil {
 		log.Print("Failed to load .env file")
+		log.Println(err)
 		log.Print("Assuming process environment has necessary environment variables")
-		log.Fatal(err)
 	}
 	host := safelyGetEnvVar("DB_host")
 	port := safelyGetEnvVar("DB_port")
